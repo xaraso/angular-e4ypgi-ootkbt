@@ -1,0 +1,40 @@
+<div class="sample-column">
+  <igx-navbar class="nav">
+    <igx-navbar-action>
+      <button igxButton="icon" igxToggleAction="navigation">
+        <igx-icon>menu</igx-icon>
+      </button>
+    </igx-navbar-action>
+    <div igxNavbarTitle>
+      <a>
+        <img
+          class="header-image"
+          src="https://cdn-icons-png.flaticon.com/512/196/196319.png"
+          style="margin-top: 7px;"
+        />
+        <span class="titulo">Nombre Máquina 1</span>
+      </a>
+    </div>
+    <!-- <button
+      igxButton="raised"
+      igxRipple="#fdfdfd"
+      class="buttons-sample"
+      data-toggle="modal"
+      (click)="alert.open()"
+      data-target="#myModal"
+    >
+      <igx-icon>house</igx-icon>
+      <span>Cambiar Centro</span>
+    </button> -->
+    <app-igx-dialog></app-igx-dialog>
+  </igx-navbar>
+</div>
+
+<!-- <igx-dialog
+  #alert
+  title="Notification"
+  message="Your email has been sent successfully!"
+  leftButtonLabel="OK"
+  (leftButtonSelect)="alert.close()"
+>
+</igx-dialog> -->

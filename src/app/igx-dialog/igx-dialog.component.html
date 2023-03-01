@@ -1,0 +1,13 @@
+<button igxButton="raised" igxRipple="white" (click)="dialog1.open()">
+  Cambiar Centro
+</button>
+
+<igx-dialog #dialog1 [ngClass]="'modal-cambio'" title="Cambiar Centro">
+  <div class="card-content clearfix maquinas">
+    <ng-container *ngFor="let item of Prueba">
+      <div class="card">
+        {{ item }}
+      </div>
+    </ng-container>
+  </div>
+</igx-dialog>

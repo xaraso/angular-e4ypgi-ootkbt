@@ -1,0 +1,23 @@
+<div class="content-wrap" igxLayout>
+  <igx-nav-drawer id="navigation" #drawer [pin]="true" [pinThreshold]="0">
+    <ng-template igxDrawer>
+      <nav>
+        <span
+          class="item"
+          *ngFor="let item of navItems"
+          igxDrawerItem
+          [active]="item.text === selected"
+          igxRipple
+          (click)="navigate(item)"
+        >
+          <igx-icon family="material">{{ item.name }}</igx-icon>
+          <span>{{ item.text }}</span>
+        </span>
+      </nav>
+    </ng-template>
+  </igx-nav-drawer>
+  <main>
+    <app-grid-selection-template-excel></app-grid-selection-template-excel>
+    <app-list-view></app-list-view>
+  </main>
+</div>
