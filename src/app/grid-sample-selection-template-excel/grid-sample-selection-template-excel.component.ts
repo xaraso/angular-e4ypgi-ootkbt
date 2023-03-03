@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./grid-sample-selection-template-excel.component.scss'],
   templateUrl: 'grid-sample-selection-template-excel.component.html',
 })
-export class GridSelectionTemplateExcelComponent {
-
-}
+export class GridSelectionTemplateExcelComponent {}

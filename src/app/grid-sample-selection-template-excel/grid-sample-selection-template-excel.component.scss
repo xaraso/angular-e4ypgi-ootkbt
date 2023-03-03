@@ -2,23 +2,38 @@
 
 $custom-navbar-theme: navbar-theme(
   $text-color: #151515,
-  $background: #a81b1b,
+  $background: #ffffff,
   $idle-icon-color: #151515,
-  $hover-icon-color: #c93030,
+  $hover-icon-color: #dfdfdf,
 );
 
 :host {
   @include css-vars($custom-navbar-theme);
 }
 
-.buttons-sample {
-  flex-direction: column;
-  background: #eeeeee;
+// .buttons-sample {
+//   flex-direction: column;
+//   background: #eeeeee;
+// }
+
+.navbar {
+  height: 8%;
+}
+
+::ng-deep .navbar igx-navbar nav,
+.navbar igx-navbar {
+  border-radius: 10px;
+  height: 100%;
+}
+
+.titleContent {
+  max-height: 100%;
 }
 
 img {
-  max-width: 10px;
-  max-height: 10px;
+  height: 10px;
+  max-height: 100%;
+  max-width: 100%;
   border-radius: 50%;
   background-color: #151515;
 }
@@ -55,6 +70,18 @@ img {
 //   height: 100%;
 //   width: 100%;
 // }
+
+// .nav *,
+// igx-navbar nav *,
+// .igx-navbar *,
+// nav.igx-navbar * {
+//   border-radius: 10px !important;
+// }
+
+// .titulo {
+//   font-size: 4em;
+// }
+
 .version {
   float: right;
   bottom: 0.1em;
