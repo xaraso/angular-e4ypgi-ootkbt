@@ -21,7 +21,6 @@ import {
 import { GridSelectionTemplateExcelComponent } from './grid-sample-selection-template-excel/grid-sample-selection-template-excel.component';
 import { NavigationDrawerComponent } from './navigation-drawer/navigation-drawer.component';
 import { ListViewComponent } from './list-view/list-view.component';
-import { CardComponent } from './card/card.component';
 import { IgxDialogComponent } from './igx-dialog/igx-dialog.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { IgxDialogComponent } from './igx-dialog/igx-dialog.component';
     GridSelectionTemplateExcelComponent,
     NavigationDrawerComponent,
     ListViewComponent,
-    CardComponent,
     IgxDialogComponent,
   ],
   imports: [

@@ -1,4 +1,41 @@
+@use '../../variables' as *;
 :host {
   display: block;
   padding: 16px;
+}
+
+.buttons-sample {
+  display: flex;
+  margin: 8px;
+}
+
+.button-sample {
+  display: flex;
+  margin-right: 16px;
+}
+
+$custom-button-theme: button-theme(
+  $foreground: #000000,
+  $hover-foreground: #000000,
+  $background: hsl(0, 0%, 91%),
+  $hover-background: #e6e6e6,
+  $focus-foreground: #000000,
+  $focus-background: #e6e6e6,
+  $disabled-foreground: #bbb,
+);
+
+// its not working because somewhere is overwriting the css
+$my-dialog-theme: dialog-theme(
+  $background: #205874,
+  $title-color: #000000,
+);
+
+:host ::ng-deep {
+  @include css-vars($custom-button-theme);
+}
+
+:host {
+  ::ng-deep {
+    @include css-vars($my-dialog-theme);
+  }
 }
