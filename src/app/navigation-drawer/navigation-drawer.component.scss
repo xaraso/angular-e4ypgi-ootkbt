@@ -18,7 +18,6 @@ main {
   height: 100%;
   width: 100%;
   overflow: auto;
-  // padding: 16px;
   h5 {
     padding: 8px 0;
   }
@@ -27,8 +26,4 @@ main {
 :host {
   display: block;
   height: calc(100%);
-}
-
-span .item {
-  height: 300px;
 }
