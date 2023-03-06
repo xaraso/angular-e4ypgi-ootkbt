@@ -17,6 +17,7 @@ $custom-navbar-theme: navbar-theme(
 // }
 
 .navbar {
+  min-height: 90px;
   height: 8%;
 }
 
@@ -24,16 +25,34 @@ $custom-navbar-theme: navbar-theme(
 .navbar igx-navbar {
   border-radius: 10px;
   height: 100%;
+  max-height: 100%;
 }
 
-.titleContent {
-  display: flex;
+:host ::ng-deep {
+  .igx-navbar {
+    .igx-navbar__left {
+      height: 100%;
+    }
+  }
+}
+
+// :host .prueba {
+//   height: 100%;
+// }
+
+.prueba {
+  // &:hover {
+  //   height: 100%;
+  // }
+  // display: flex;
+  height: 100%;
+  max-width: 100%;
   max-height: 100%;
 }
 
 img {
-  max-height: 10%;
-  max-width: 10%;
+  max-height: 95%;
+  max-width: 95%;
   border-radius: 50%;
 }
 

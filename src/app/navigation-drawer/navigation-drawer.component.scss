@@ -1,3 +1,14 @@
+@use '../../variables' as *;
+
+$navdrawer-theme: navdrawer-theme(
+  $background: #ffffff,
+  $item-active-background: #c5c5c5,
+  $item-icon-color: #333333,
+  $item-text-color: #333333,
+);
+// Pass the theme to the css-vars() mixin
+@include css-vars($navdrawer-theme);
+
 .content-wrap {
   display: flex;
   height: 100%;
