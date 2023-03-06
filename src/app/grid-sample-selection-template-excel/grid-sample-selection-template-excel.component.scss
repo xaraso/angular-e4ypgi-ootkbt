@@ -11,11 +11,6 @@ $custom-navbar-theme: navbar-theme(
   @include css-vars($custom-navbar-theme);
 }
 
-// .buttons-sample {
-//   flex-direction: column;
-//   background: #eeeeee;
-// }
-
 .navbar {
   min-height: 90px;
   height: 8%;
@@ -36,15 +31,7 @@ $custom-navbar-theme: navbar-theme(
   }
 }
 
-// :host .prueba {
-//   height: 100%;
-// }
-
-.prueba {
-  // &:hover {
-  //   height: 100%;
-  // }
-  // display: flex;
+.title {
   height: 100%;
   max-width: 100%;
   max-height: 100%;
@@ -60,45 +47,6 @@ img {
   padding-left: 0.5em;
   font-size: 2.2em;
 }
-
-// .header-image {
-//   width: 10%;
-// }
-
-// igx-navbar {
-//   border-radius: 8px;
-// }
-
-// nav.igx-navbar,
-// nav,
-// igx-navbar * {
-//   border-radius: inherit !important;
-// }
-
-// .card-wrapper,
-// igx-card {
-//   position: absolute;
-//   width: 200px;
-//   height: 100%;
-//   right: 0px;
-//   background: #eeeeee;
-// }
-
-// .buttons {
-//   height: 100%;
-//   width: 100%;
-// }
-
-// .nav *,
-// igx-navbar nav *,
-// .igx-navbar *,
-// nav.igx-navbar * {
-//   border-radius: 10px !important;
-// }
-
-// .titulo {
-//   font-size: 4em;
-// }
 
 .version {
   float: right;
