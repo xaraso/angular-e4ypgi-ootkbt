@@ -1,5 +1,5 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
-import { IgxNavigationDrawerComponent } from 'igniteui-angular';
+import { IgxIconService, IgxNavigationDrawerComponent } from 'igniteui-angular';
 
 @Component({
   selector: 'app-navigation-drawer',
@@ -7,8 +7,10 @@ import { IgxNavigationDrawerComponent } from 'igniteui-angular';
   styleUrls: ['./navigation-drawer.component.scss'],
 })
 export class NavigationDrawerComponent {
+
+
   public navItems = [
-    { name: 'account_circle', text: 'Presencia en máquina' },
+    { name: 'machinery', text: 'Presencia en máquina' },
     { name: 'error', text: 'Tareas' },
     { name: 'group_work', text: 'Ordenes' },
     { name: 'account_circle', text: 'Incidencias' },
@@ -30,4 +32,12 @@ export class NavigationDrawerComponent {
   handleKeyDown(event: KeyboardEvent) {
     this.drawer.toggle();
   }
+
+  constructor(private iconService: IgxIconService){
+
+  }
+  public ngOnInit() {
+    // register custom SVG icons
+    this.iconService.addSvgIcon('machinery', '/assets/machinery.svg', 'filter-icons');
+}
 }
