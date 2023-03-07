@@ -1,6 +1,6 @@
 <div class="content-wrap" igxLayout>
   <igx-nav-drawer id="navigation" #drawer [pin]="true" [pinThreshold]="0">
-    <ng-template igxDrawer>
+    <!-- <ng-template igxDrawer>
       <nav>
         <span
           class="item"
@@ -14,13 +14,16 @@
           <span>{{ item.text }}</span>
         </span>
       </nav>
+    </ng-template> -->
+    <ng-template igxDrawer>
+      <nav>
+        <app-nav-item> </app-nav-item>
+      </nav>
     </ng-template>
   </igx-nav-drawer>
   <main>
     <app-grid-selection-template-excel></app-grid-selection-template-excel>
-    <!-- <app-list-view></app-list-view> -->
-    <igx-icon name="error"> aaa</igx-icon>
-    <img src="assets/machinery.svg" >
-
+    <app-list-view></app-list-view>
+    <app-buttons></app-buttons>
   </main>
 </div>

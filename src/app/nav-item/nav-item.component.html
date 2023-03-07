@@ -1,0 +1,11 @@
+<span
+  (click)="cambiomenu(item)"
+  class="item"
+  *ngFor="let item of navI"
+  igxDrawerItem
+  [active]="item.text === selected"
+  igxRipple
+>
+  <igx-icon family="material">{{ item.name }}</igx-icon>
+  <span>{{ item.text }}</span>
+</span>

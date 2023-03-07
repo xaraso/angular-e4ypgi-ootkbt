@@ -22,6 +22,8 @@ import { GridSelectionTemplateExcelComponent } from './grid-sample-selection-tem
 import { NavigationDrawerComponent } from './navigation-drawer/navigation-drawer.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { IgxDialogComponent } from './igx-dialog/igx-dialog.component';
+import { NavItemComponent } from './nav-item/nav-item.component';
+import { ButtonsComponent } from './buttons/buttons.component';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -31,6 +33,8 @@ import { IgxDialogComponent } from './igx-dialog/igx-dialog.component';
     NavigationDrawerComponent,
     ListViewComponent,
     IgxDialogComponent,
+    NavItemComponent,
+    ButtonsComponent,
   ],
   imports: [
     BrowserModule,
