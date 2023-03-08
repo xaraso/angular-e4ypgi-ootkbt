@@ -1,28 +1,72 @@
-<div class="density-chooser">
-  <igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
-</div>
-
-<igx-input-group type="search" class="search">
-  <igx-prefix>
-      <igx-icon>search</igx-icon>
-  </igx-prefix>
-  <input #search igxInput placeholder="Search Contacts" [(ngModel)]="searchContact">
-  <igx-suffix *ngIf="search.value.length > 0" (click)="searchContact = null">
-      <igx-icon>clear</igx-icon>
-  </igx-suffix>
-</igx-input-group>
-
-<div class="list-sample">
-  <igx-list [displayDensity]="density">
-      <igx-list-item [isHeader]="true">Contacts</igx-list-item>
-      <igx-list-item igxRipple igxRippleTarget=".igx-list__item-content" #item
-          *ngFor="let contact of contacts | igxFilter: filterContacts;">
-          <igx-avatar igxListThumbnail [src]="contact.photo" [roundShape]="true"></igx-avatar>
-          <span igxListLineTitle>{{ contact.name }}</span>
-          <span igxListLineSubTitle>{{ contact.phone }}</span>
-          <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" igxRipple="pink"
-              [igxRippleCentered]="true" (click)="toggleFavorite(contact, $event)"
-              (mousedown)="mousedown($event)">star</igx-icon>
-      </igx-list-item>
-  </igx-list>
+<div class="grid__wrapper">
+  <igx-grid
+    [igxPreventDocumentScroll]="true"
+    [data]="data"
+    [autoGenerate]="false"
+    height="500px"
+    width="100%"
+  >
+    <igx-column
+      [field]="'ID'"
+      [header]="'ID'"
+      [resizable]="true"
+      width="auto"
+    ></igx-column>
+    <igx-column
+      [field]="'CompanyName'"
+      [header]="'Company Name'"
+      width="auto"
+      [resizable]="true"
+    ></igx-column>
+    <igx-column
+      [field]="'ContactName'"
+      [header]="'Contact Name'"
+      width="auto"
+      [resizable]="true"
+      [minWidth]="'60px'"
+      [maxWidth]="'230px'"
+    ></igx-column>
+    <igx-column
+      [field]="'ContactTitle'"
+      [header]="'Contact Title'"
+      width="auto"
+      [resizable]="true"
+    ></igx-column>
+    <igx-column
+      [field]="'Address'"
+      [header]="'Address'"
+      width="auto"
+      [resizable]="true"
+    ></igx-column>
+    <igx-column
+      [field]="'City'"
+      [header]="'City'"
+      width="auto"
+      [resizable]="true"
+    ></igx-column>
+    <igx-column
+      [field]="'Region'"
+      [header]="'Region'"
+      width="auto"
+      [resizable]="true"
+    ></igx-column>
+    <igx-column
+      [field]="'PostalCode'"
+      [header]="'Postal Code'"
+      width="auto"
+      [resizable]="true"
+    ></igx-column>
+    <igx-column
+      [field]="'Phone'"
+      [header]="'Phone'"
+      width="auto"
+      [resizable]="true"
+    ></igx-column>
+    <igx-column
+      [field]="'Fax'"
+      [header]="'Fax'"
+      width="auto"
+      [resizable]="true"
+    ></igx-column>
+  </igx-grid>
 </div>
