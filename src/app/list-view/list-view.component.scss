@@ -1,3 +1,32 @@
+@use '../../variables' as *;
+
+$my-grid-theme: grid-theme(
+  $header-background: white,
+  $header-border-width: 0,
+  $row-even-background: white,
+  $row-odd-background: white,
+  $row-selected-background: #ededed,
+  $cell-active-border-color: rgba(255, 255, 255, 0),
+);
+// Pass the theme to the css-vars() mixin
+@include css-vars($my-grid-theme);
+
 .grid__wrapper {
   padding: 16px;
+}
+
+igx-grid {
+  border-radius: 10px;
+}
+
+igx-grid-row {
+  background: black;
+}
+
+// igx-grid-row {
+//   background: linear-gradient(#f1f1f1, white, white, white);
+// }
+
+div {
+  font-size: 1em;
 }

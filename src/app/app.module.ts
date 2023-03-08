@@ -17,6 +17,7 @@ import {
   IgxListModule,
   IgxInputGroupModule,
   IgxButtonGroupModule,
+IgxGridModule,
 } from 'igniteui-angular';
 import { GridSelectionTemplateExcelComponent } from './grid-sample-selection-template-excel/grid-sample-selection-template-excel.component';
 import { NavigationDrawerComponent } from './navigation-drawer/navigation-drawer.component';
@@ -24,6 +25,7 @@ import { ListViewComponent } from './list-view/list-view.component';
 import { IgxDialogComponent } from './igx-dialog/igx-dialog.component';
 import { NavItemComponent } from './nav-item/nav-item.component';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { IgxPreventDocumentScrollModule } from './directives/prevent-scroll.directive';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -48,12 +50,14 @@ import { ButtonsComponent } from './buttons/buttons.component';
     IgxRippleModule,
     IgxNavigationDrawerModule,
     IgxToggleModule,
-
+    IgxGridModule,
     IgxAvatarModule,
     IgxFilterModule,
     IgxListModule,
     IgxInputGroupModule,
     IgxButtonGroupModule,
+    IgxPreventDocumentScrollModule,
+
   ],
   providers: [],
   entryComponents: [],
