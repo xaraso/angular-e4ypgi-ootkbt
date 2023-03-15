@@ -1,36 +1,34 @@
 @use '../../variables' as *;
 
-$yellow-color: #f4d45c;
-$black-color: #292826;
-
-$dark-palette: palette(
-  $primary: $black-color,
-  $secondary: $yellow-color,
-  $surface: #222,
+$my-tabs-theme: tabs-theme(
+  $item-text-color: black,
+  $item-background: rgb(255, 255, 255),
+  $button-background: white,
+  $item-hover-background: white,
+  $item-active-background: white,
+  $indicator-color: rgb(255, 255, 255),
 );
 
-$dark-tabs: tabs-theme(
-  $item-text-color: color($dark-palette, 'secondary', 400),
-  $item-background: color($dark-palette, 'primary', 400),
-  $item-hover-background: color($dark-palette, 'secondary', 400),
-  $item-hover-color: color($dark-palette, 'primary', 400),
-  $item-active-color: color($dark-palette, 'secondary', 400),
-  $item-active-icon-color: color($dark-palette, 'secondary', 400),
-  $indicator-color: color($dark-palette, 'secondary', 400),
-  $tab-ripple-color: color($dark-palette, 'secondary', 400),
-);
-
-:host {
-  @include palette($dark-palette);
-  igx-tab-content {
-    padding: 8px;
-  }
-
-  ::ng-deep {
-    @include css-vars($dark-tabs);
-  }
-}
+@include css-vars($my-tabs-theme);
 
 igx-tabs {
   margin: 1em;
+  border-radius: 10px;
+  // background-color: white;
+  background-color: #dadada;
+}
+
+igx-tab-header {
+  border-radius: 10px 10px 0 0;
+  margin: 0 7px 0 0;
+  border-bottom: 1px solid #dadada;
+}
+
+igx-tab-content {
+  background: white;
+  border-radius: 0 10px 0 0;
+}
+
+::ng-deep .igx-tabs__header {
+  background: #dadada;
 }
