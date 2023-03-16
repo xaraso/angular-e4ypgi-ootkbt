@@ -1,72 +1,33 @@
 <div class="grid__wrapper">
   <igx-grid
-    [igxPreventDocumentScroll]="true"
-    [data]="data"
-    [autoGenerate]="false"
-    height="500px"
-    width="100%"
+    [data]=""
+    (columnInit)="columnInit($event)"
+    displayDensity="cosy"
+    igxPreventDocumentScroll
+    #grid1
+    [rowSelection]="'single'"
+    [hideRowSelectors]="true"
+    cellSelection="none"
+    [emptyGridMessage]="' '"
   >
     <igx-column
-      [field]="'ID'"
-      [header]="'ID'"
+      *ngFor="let col of columnas"
+      [sortable]="true"
       [resizable]="true"
-      width="auto"
-    ></igx-column>
-    <igx-column
-      [field]="'CompanyName'"
-      [header]="'Company Name'"
-      width="auto"
-      [resizable]="true"
-    ></igx-column>
-    <igx-column
-      [field]="'ContactName'"
-      [header]="'Contact Name'"
-      width="auto"
-      [resizable]="true"
-      [minWidth]="'60px'"
-      [maxWidth]="'230px'"
-    ></igx-column>
-    <igx-column
-      [field]="'ContactTitle'"
-      [header]="'Contact Title'"
-      width="auto"
-      [resizable]="true"
-    ></igx-column>
-    <igx-column
-      [field]="'Address'"
-      [header]="'Address'"
-      width="auto"
-      [resizable]="true"
-    ></igx-column>
-    <!-- <igx-column
-      [field]="'City'"
-      [header]="'City'"
-      width="auto"
-      [resizable]="true"
-    ></igx-column> -->
-    <!-- <igx-column
-      [field]="'Region'"
-      [header]="'Region'"
-      width="auto"
-      [resizable]="true"
-    ></igx-column>
-    <igx-column
-      [field]="'PostalCode'"
-      [header]="'Postal Code'"
-      width="auto"
-      [resizable]="true"
-    ></igx-column>
-    <igx-column
-      [field]="'Phone'"
-      [header]="'Phone'"
-      width="auto"
-      [resizable]="true"
-    ></igx-column>
-    <igx-column
-      [field]="'Fax'"
-      [header]="'Fax'"
-      width="auto"
-      [resizable]="true"
-    ></igx-column> -->
+      [field]="col.Nombre"
+      [header]="col.Etiqueta"
+    >
+    </igx-column>
+    <!-- <igx-column [field]="'ID'" [header]="'ID'" [resizable]="true" width="auto"></igx-column>
+        <igx-column [field]="'CompanyName'" [header]="'Company Name'" width="auto" [resizable]="true"></igx-column>
+        <igx-column [field]="'ContactName'" [header]="'Contact Name'" width="auto" [resizable]="true"
+            [minWidth]="'60px'" [maxWidth]="'230px'"></igx-column>
+        <igx-column [field]="'ContactTitle'" [header]="'Contact Title'" width="auto" [resizable]="true"></igx-column>
+        <igx-column [field]="'Address'" [header]="'Address'" width="auto" [resizable]="true"></igx-column>
+        <igx-column [field]="'City'" [header]="'City'" width="auto" [resizable]="true"></igx-column>
+        <igx-column [field]="'Region'" [header]="'Region'" width="auto" [resizable]="true"></igx-column>
+        <igx-column [field]="'PostalCode'" [header]="'Postal Code'" width="auto" [resizable]="true"></igx-column>
+        <igx-column [field]="'Phone'" [header]="'Phone'" width="auto" [resizable]="true"></igx-column>
+        <igx-column [field]="'Fax'" [header]="'Fax'" width="auto" [resizable]="true"></igx-column> -->
   </igx-grid>
 </div>
