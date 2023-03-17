@@ -28,6 +28,7 @@ import { NavItemComponent } from './nav-item/nav-item.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { IgxPreventDocumentScrollModule } from './directives/prevent-scroll.directive';
 import { TabsComponent } from './tabs/tabs.component';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -40,6 +41,7 @@ import { TabsComponent } from './tabs/tabs.component';
     NavItemComponent,
     ButtonsComponent,
     TabsComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
