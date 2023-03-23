@@ -1,0 +1,10 @@
+.combo {
+  margin: 8px;
+  // height: 430px;
+  background-color: white;
+  // border-radius: 10px;
+}
+
+::ng-deep igx-simple-combo .igx-input-group__bundle {
+  height: 20px;
+}
