@@ -4,6 +4,19 @@
   max-width: 550px;
 }
 
+.a {
+  max-width: 500px;
+  height: 100px;
+}
+
+igx-input {
+  height: 100px;
+}
+
+igx-input-group {
+  height: 100px;
+}
+
 $custom-input-group: input-group-theme(
   $border-background: #ffffff,
   $border-border-radius: 20px,
