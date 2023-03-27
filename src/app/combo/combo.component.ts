@@ -6,6 +6,7 @@ import { localData } from './local-data';
   styleUrls: ['./combo.component.scss'],
 })
 export class ComboComponent {
+  hola=199
   public lData: any[];
 
   public ngOnInit() {
