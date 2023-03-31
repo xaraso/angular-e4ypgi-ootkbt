@@ -1,11 +1,10 @@
 <article class="sample-column">
-  <form>
-    <igx-input-group type="border">
-      <input igxInput name="fullName" type="text" />
-    </igx-input-group>
-  </form>
+  <igx-input-group type="border">
+    <input igxInput name="fullName" type="text" [disabled]="true" />
+    <igx-suffix>
+      <igx-icon>phone</igx-icon>
+    </igx-suffix>
+  </igx-input-group>
 </article>
-
-
 
 <button (click)="prueba()">aaaa</button>

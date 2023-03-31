@@ -17,22 +17,21 @@ export class InputComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const val = 45;
-    if (val === null) {
-      return;
-    }
-    const inputs = document.querySelectorAll('input');
-    inputs.forEach((i) => {
-      i.style.height = val.toString() + 'px';
-    });
-
-    const inputGroups = document.querySelectorAll(
-      'igx-input-group'
-    ) as NodeListOf<HTMLElement>;
-    inputGroups.forEach((i) => {
-      i.style.height = val.toString() + 'px';
-    });
-    const combo = document.querySelector('igx-combo') as HTMLElement;
-    combo.style.height = val.toString() + 'px';
+    // const val = 30;
+    // if (val === null) {
+    //   return;
+    // }
+    // const inputs = document.querySelectorAll('input');
+    // inputs.forEach((i) => {
+    //   i.style.height = val.toString() + 'px';
+    // });
+    // const inputGroups = document.querySelectorAll(
+    //   'igx-input-group'
+    // ) as NodeListOf<HTMLElement>;
+    // inputGroups.forEach((i) => {
+    //   i.style.height = val.toString() + 'px';
+    // });
+    // const combo = document.querySelector('igx-combo') as HTMLElement;
+    // combo.style.height = val.toString() + 'px';
   }
 }
